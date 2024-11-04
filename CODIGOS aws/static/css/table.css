@@ -1,0 +1,45 @@
+/* Estilos personalizados para la tabla */
+        .custom-table {
+            border: none;
+            border-collapse: separate;
+            border-spacing: 0 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .custom-table th, .custom-table td {
+            padding: 12px;
+            border: none;
+            background: #f9f9f9;
+        }
+
+        .custom-table thead th {
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .custom-table tbody tr {
+            transition: all 0.3s ease;
+        }
+
+        .custom-table tbody tr:hover {
+            background-color: #e9f5ff;
+        }
+
+        .custom-table td {
+            border-left: 4px solid #007bff;
+            color: #333;
+        }
+
+        /* Encabezado */
+        .header {
+            font-size: 1.8em;
+            text-align: center;
+            padding: 15px;
+            background-color: #007bff;
+            color: white;
+            margin-bottom: 20px;
+        }

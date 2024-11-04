@@ -1,0 +1,245 @@
+/* General Styles */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Cambiado a min-height */
+    margin: 0;
+    background: linear-gradient(135deg, #FFDEE9 0%, #B5FFFC 100%);
+    font-family: 'Roboto', sans-serif;
+    color: #37394f;
+    overflow-y: auto; /* Cambiado a auto para permitir el desplazamiento vertical */
+}
+
+/* Header */
+.header {
+    width: 100%;
+    background: rgba(55, 71, 79, 0.8);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+}
+
+/* Input Container */
+.input-container {
+    margin-top: 20px;
+    text-align: center;
+    color: #37474f;
+}
+
+.input-container label {
+    font-size: 18px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 200px;
+    font-size: 16px;
+    border: 2px solid #cfd8dc;
+    border-radius: 5px;
+    margin-top: 5px;
+    transition: box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+    box-shadow: 0px 0px 8px rgba(0, 150, 136, 0.5);
+}
+
+/* Car Animation */
+.car-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;
+    animation: float 3s ease-in-out infinite;
+}
+
+#car {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    transition: transform 0.5s ease;
+}
+
+/* Controller Styles */
+.controller {
+    display: grid;
+    grid-template-columns: repeat(3, 80px); /* Mantener tres columnas */
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* Estilo adicional para el botón "down" */
+button#down {
+    grid-column: 2; /* Colocar el botón "down" en la segunda columna */
+    grid-row: 3; /* Asegurarse de que esté en la fila correcta */
+}
+
+button {
+    width: 80px;
+    height: 80px;
+    font-size: 24px;
+    color: white; /* Cambiado a blanco para mayor contraste */
+    border: 2px solid #4f374b;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+/* Colores de los botones */
+button#up-left,
+button#up-right {
+    background-color: #157de4; /* Azul marino */
+}
+
+button#up {
+    background-color: #4caf50; /* Verde */
+}
+
+button#down {
+    background-color: #4caf50; /* Verde */
+}
+
+button#left,
+button#right {
+    background-color: #ffeb3b; /* Amarillo */
+}
+
+button#stop {
+    background-color: #ef5350; /* Rojo */
+}
+
+/* Estilos para el hover */
+button:hover {
+    opacity: 0.9; /* Cambia la opacidad al pasar el mouse */
+    transform: scale(1.1);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+button.active {
+    background-color: #90a4ae !important;
+    color: white;
+    box-shadow: 0px 8px 15px rgba(0, 150, 136, 0.4);
+}
+
+/* Estilos para el botón "stop" en hover */
+button#stop:hover {
+    background-color: #e57373; /* Color más claro al pasar el mouse */
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .controller {
+        grid-template-columns: repeat(3, 60px);
+        gap: 10px;
+    }
+
+    button {
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+    }
+}
+/* Estilos personalizados para la tabla */
+.custom-table {
+    border: none;
+    border-collapse: separate;
+    border-spacing: 0 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.custom-table th, .custom-table td {
+    padding: 12px;
+    border: none;
+    background: #f9f9f9;
+}
+
+.custom-table thead th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.custom-table tbody tr {
+    transition: all 0.3s ease;
+}
+
+.custom-table tbody tr:hover {
+    background-color: #e9f5ff;
+}
+
+.custom-table td {
+    border-left: 4px solid #007bff;
+    color: #333;
+}
+
+/* Encabezado */
+.header {
+    font-size: 1.8em;
+    text-align: center;
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Asegura que la tabla tenga un máximo de altura y desplazamiento */
+.table-responsive {
+    max-height: 400px;  /* Ajusta este valor según tus necesidades */
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+/* Ancho completo y colapso de bordes para la tabla */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Define los estilos de las celdas de la tabla */
+.table th, .table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    min-width: 120px;  /* Ajusta este valor si necesitas columnas más anchas */
+}
+
+/* Ajustes para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .table-responsive {
+        max-width: 100vw;
+        overflow-x: auto;
+    }
+
+    .table th, .table td {
+        font-size: 12px;
+        min-width: 100px;
+    }
+}
+
+
+
+
+#toggleButton i.closed::before {
+    content: "\f070"; /* Código de Font Awesome para ojo cerrado */
+}
+
+#toggleButton i.opened::before {
+    content: "\f06e"; /* Código de Font Awesome para ojo abierto */
+}
+
+#toggleButton {
+    cursor: pointer;
+}
